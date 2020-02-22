@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+{% include head.html %}
+
+<body class="landing">
+        {% include header.html %}
+
+        <!-- banner -->
+        <section id="banner">
+                <div class="inner">
+                        <h2>Canterbury Tennis Club</h2>
+                        <a href="https://goo.gl/maps/FT63d81YouF1mTz76">
+                        <p style="margin: 0;">25 Croydon Road, Surrey Hills</p>
+                        <p>Victoria, Australia</p></a>
+                </div>
+                <a href="#main-content" class="more scrolly">Scroll down</a>
+        </section>
+
+        <!-- main content of page -->
+        <section id="main-content" class="wrapper style1 special">
+                <div class="inner">
+                        <header class="major">
+                                <span style="text-align: left;">{{ content }}</span>
+                        </header>
+                </div>
+        </section>
+
+        <!-- featuring sub-pages -->
+        <section id="features" class="wrapper alt style2">
+
+                {% for post in site.posts limit:site.tiles-count %}{% if site.tiles-source == 'posts' %}
+
+                <section class="spotlight">
+                        <div class="image">{% if post.image %}<img
+                                        src="{% if site.featured-image-source %}{{ post.image | prepend: site.featured-image-source | absolute_url }}{% else %}{{ "" | absolute_url }}/assets/images/{{ post.image }}{% endif %}"
+                                        alt="" />{% endif %}</div>
+                        <div class="content">
+                                <h2><a href="{{ post.url | relative_url }}" class="link">{{ post.title }}</a></h2>
+                                <p>{{ post.description }}</p>
+                        </div>
+                </section>
+
+                {% endif %}{% endfor %}
+                {% for page in site.pages limit:site.tiles-count %}{% if site.tiles-source == 'pages' %}{% if page.layout == 'default' %}{% continue %}{% endif %}
+
+                <section class="spotlight">
+                        <div class="image">{% if page.image %}<img
+                                        src="{% if site.featured-image-source %}{{ page.image | prepend: site.featured-image-source | absolute_url }}{% else %}{{ "" | absolute_url }}/assets/images/{{ page.image }}{% endif %}"
+                                        alt="" />{% endif %}</div>
+                        <div class="content">
+                                <h2><a href="{{ page.url | relative_url }}" class="link">{{ page.title }}</a></h2>
+                                <p>{{ page.description }}</p>
+                        </div>
+                </section>
+
+                {% endif %}{% endfor %}
+
+        </section>
+
+        <!-- call-to-action: membership -->
+        <section id="cta" class="wrapper style4">
+                <div class="inner">
+                        <header>
+                                <h2>Membership and Coaching</h2>
+                                <p>Want to become a member? We openly welcome membership enquiries.</p>
+                        </header>
+                        <ul class="actions vertical">
+                                <li><a href="membership" class="button fit special">Membership</a></li>
+                                <li><a href="https://www.nimatennis.com/" class="button fit">Coaching</a></li>
+                        </ul>
+                </div>
+        </section>
+
+        {% include footer.html %}
+</body>
+
+</html>

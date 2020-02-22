@@ -1474,10 +1474,9 @@
 	h1, h2, h3, h4, h5, h6 {
 		color: #fff;
 		font-weight: 800;
-		letter-spacing: 0.225em;
+		letter-spacing: 0.125em;
 		line-height: 1em;
 		margin: 0 0 1em 0;
-		text-transform: uppercase;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -1991,7 +1990,7 @@
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: -1.5em 0 2em 0;
 		padding-left: 1em;
 	}
 
@@ -3195,10 +3194,9 @@
 					color: inherit;
 					display: block;
 					font-size: 0.8em;
-					letter-spacing: 0.225em;
+					letter-spacing: 0.125em;
 					outline: 0;
 					text-decoration: none;
-					text-transform: uppercase;
 				}
 
 					@media screen and (max-width: 736px) {
@@ -3316,9 +3314,8 @@
 						color: #fff;
 						display: block;
 						font-size: 0.8em;
-						letter-spacing: 0.225em;
+						letter-spacing: 0.125em;
 						padding: 0 1.5em;
-						text-transform: uppercase;
 					}
 
 						#header nav > ul > li > a.menuToggle {
@@ -3441,7 +3438,7 @@
 			}
 
 		#banner p {
-			letter-spacing: 0.225em;
+			letter-spacing: 0.125em;
 			text-transform: uppercase;
 		}
 
@@ -3468,7 +3465,7 @@
 			font-size: 0.8em;
 			height: 8.5em;
 			left: 50%;
-			letter-spacing: 0.225em;
+			letter-spacing: 0.125em;
 			margin-left: -8.5em;
 			opacity: 1;
 			outline: 0;
@@ -3647,8 +3644,7 @@
 
 		#main > header p {
 			color: inherit;
-			letter-spacing: 0.225em;
-			text-transform: uppercase;
+			letter-spacing: 0.125em;
 			top: 0;
 		}
 
@@ -3700,9 +3696,9 @@
 /* Footer */
 
 	#footer {
-		padding: 6em 0 4em 0 ;
+		padding: 2em 2em 2em 2em ;
 		background-color: #1d242a;
-		text-align: center;
+		text-align: left;
 	}
 
 		#footer .icons {
@@ -3720,10 +3716,9 @@
 		#footer .copyright {
 			color: rgba(255, 255, 255, 0.5);
 			font-size: 0.8em;
-			letter-spacing: 0.225em;
+			letter-spacing: 0.125em;
 			list-style: none;
 			padding: 0;
-			text-transform: uppercase;
 		}
 
 			#footer .copyright li {
