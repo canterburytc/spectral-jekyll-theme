@@ -13,11 +13,22 @@
 					<a href="#menu" class="menuToggle"><span>Menu</span></a>
 					<div id="menu">
 						<ul>
-							{% for page in site.pages %} {% if page.layout == "home" %}
-							<li><a href="{{ page.url | replace: '.html', '' | relative_url }}">{{ page.title }}</a></li>
-							{% endif %} {% endfor %} {% for page in site.pages %} {% if page.layout == "default" %}
-							<li><a href="{{ page.url | replace: '.html', '' | relative_url }}">{{ page.title }}</a></li>
-							{% endif %} {% endfor %}
+                                                        {% if site.data.navigation.toc[0] %}
+                                                          {% for entry in site.data.navigation.toc %}
+                                                            <li>
+                                                              <a href="{{ entry.url }}">{{ entry.title }}</a>
+                                                              {% if entry.subpages[0] %}
+                                                                <ul style="padding:unset; margin:unset">
+                                                                  {% for subpage in entry.subpages %}
+                                                                    <li style="border: unset; margin: unset; padding: unset">
+                                                                      <a href="{{ subpage.url }}">&hybull; {{ subpage.title }}</a>
+                                                                    </li>
+                                                                  {% endfor %}
+                                                                </ul>
+                                                              {% endif %}
+                                                            </li>
+                                                          {% endfor %}
+                                                        {% endif %}
 						</ul>
 					</div>
 				</li>
