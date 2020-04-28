@@ -4,7 +4,7 @@
 	<!-- Header -->
 	<header id="header" {% if page.layout == 'home' %} class="alt" {% endif %}>
 		<h1><a href="{{ "" | relative_url }}/">
-			<img src="{{ site.logo }}" alt="{{ site.title }} logo" style="height: 2em; vertical-align: middle" />
+			<img src="{{ site.logo | relative_url }}" alt="{{ site.title }} logo" style="height: 2em; vertical-align: middle" />
 			{{ site.title }}
 		</a></h1>
 		<nav id="nav">
@@ -16,12 +16,12 @@
                                                         {% if site.data.navigation.toc[0] %}
                                                           {% for entry in site.data.navigation.toc %}
                                                             <li>
-                                                              <a href="{{ entry.url }}">{{ entry.title }}</a>
+                                                              <a href="{{ entry.url | relative_url }}">{{ entry.title }}</a>
                                                               {% if entry.subpages[0] %}
                                                                 <ul style="padding:unset; margin:unset">
                                                                   {% for subpage in entry.subpages %}
                                                                     <li style="border: unset; margin: unset; padding: unset">
-                                                                      <a href="{{ subpage.url }}">&hybull; {{ subpage.title }}</a>
+                                                                      <a href="{{ subpage.url | relative_url }}">&hybull; {{ subpage.title }}</a>
                                                                     </li>
                                                                   {% endfor %}
                                                                 </ul>
