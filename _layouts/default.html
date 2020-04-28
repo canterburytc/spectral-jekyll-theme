@@ -14,6 +14,11 @@
     <article id="main">
         <header{% if page.image %} style="background-image: url('{% if site.featured-image-source %}{{ page.image | prepend: site.featured-image-source | relative_url }}{% else %}{{ "" | relative_url }}/assets/images/{{ page.image }}{% endif %}');"{% endif %}>
             <h2>{{ page.title }}</h2>
+            <p style="background: goldenrod; color: black">
+                <a href="https://www.tennis.com.au/vic/news/2020/03/26/a-message-from-tennis-victoria">
+                    CTC is closed due to coronavirus
+                </a>
+            </p>
         </header>
         <section class="wrapper style5">
             <div class="inner">
