@@ -1,16 +1,16 @@
 <!-- Footer -->
 <footer id="footer">
 	<ul class="copyright">
-		<li>Copyright {{ 'now' | date: "%Y" }} Canterbury Tennis Club.</li>
+		<li>Copyright {{ 'now' | date: "%Y" }} Canterbury Tennis Club</li>
 		{% if site.twitter_url or site.facebook_url or site.instagram_url %}
-		<li>Follow CTC on social media
+		<li>Follow CTC on
 		{% if site.twitter_url %}
-		<span class="icons"><a href="{{ site.twitter_url }}" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></span>
+		<a href="{{ site.twitter_url }}" target="_blank">Twitter</a>
 		{% endif %} {% if site.facebook_url %}
-		<span class="icons"><a href="{{ site.facebook_url }}" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></span>
+		<a href="{{ site.facebook_url }}" target="_blank">Facebook</a>
 		{% endif %} {% if site.instagram_url %}
-		<span class="icons"><a href="{{ site.instagram_url }}" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></span>
-		{% endif %}{% endif %}
+		<a href="{{ site.instagram_url }}" target="_blank">Instagram</a>
+		{% endif %}</li>{% endif %}
 	</ul>
 </footer>
 
