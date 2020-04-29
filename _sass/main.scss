@@ -95,7 +95,6 @@
 		letter-spacing: _size(letter-spacing-alt);
 		line-height: 1em;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
-		text-transform: uppercase;
 
 		a {
 			color: inherit;
@@ -556,7 +555,7 @@
 
 	ul {
 		list-style: disc;
-		margin: 0 0 _size(element-margin) 0;
+		margin: -1.5em 0 _size(element-margin) 0;
 		padding-left: 1em;
 
 		li {
@@ -1270,7 +1269,7 @@
 		padding-top: 3em;
 
 		&:before {
-			background: rgba(0,0,0,0);
+			background: transparent;
 			content: '';
 			display: block;
 			display: none;
@@ -1322,7 +1321,6 @@
 					letter-spacing: _size(letter-spacing-alt);
 					outline: 0;
 					text-decoration: none;
-					text-transform: uppercase;
 
 					@include breakpoint(small) {
 						line-height: 3em;
@@ -1422,7 +1420,6 @@
 						font-size: 0.8em;
 						letter-spacing: _size(letter-spacing-alt);
 						padding: 0 1.5em;
-						text-transform: uppercase;
 
 						&.menuToggle {
 							outline: 0;
@@ -1538,7 +1535,7 @@
 			margin-left: -8.5em;
 			opacity: 1;
 			outline: 0;
-			padding-left: _size(letter-spacing-alt);
+			padding-left: 0.225em;
 			position: absolute;
 			text-align: center;
 			text-transform: uppercase;
@@ -1591,28 +1588,6 @@
 
 			.more {
 				display: none;
-			}
-		}
-	}
-
-	body.is-loading {
-		#banner {
-			h2 {
-				@include vendor('transform', 'scale(0.95)');
-				opacity: 0;
-
-				&:before, &:after {
-					width: 0;
-				}
-			}
-
-			.more {
-				@include vendor('transform', 'translateY(8.5em)');
-				opacity: 0;
-			}
-
-			&:after {
-				opacity: 1;
 			}
 		}
 	}
@@ -1684,7 +1659,6 @@
 			p {
 				color: inherit;
 				letter-spacing: _size(letter-spacing-alt);
-				text-transform: uppercase;
 				top: 0;
 
 				a {
@@ -1726,9 +1700,9 @@
 /* Footer */
 
 	#footer {
-		@include padding(6em, 0);
+		padding: 2em 2em 2em 2em;
 		background-color: darken(_palette(bg), 8);
-		text-align: center;
+		text-align: left;
 
 		.icons {
 			font-size: 1.25em;
@@ -1748,7 +1722,6 @@
 			letter-spacing: _size(letter-spacing-alt);
 			list-style: none;
 			padding: 0;
-			text-transform: uppercase;
 
 			li {
 				border-left: solid 1px _palette(fg-light);
